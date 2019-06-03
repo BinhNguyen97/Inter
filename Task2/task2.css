@@ -1,0 +1,111 @@
+
+body {
+    text-align: center;
+    background-color: #ccc;
+    background-repeat: no-repeat;
+    background-size:1910px 1000px;
+    color: rgba(255, 255, 255);
+    overflow-x: hidden;
+}
+h2{
+	font-weight: 700;
+	font-size: 5.8rem;
+	text-shadow: 0px 0px 10px red,
+               0px 0px 20px blue,
+               0px 0px 30px yellow,
+               0px 0px 40px green;
+}
+h3{
+	font-weight: bold;
+	font-size: 30px;
+	color:white;
+	display: inline-block;
+    text-shadow: 0px 0px 10px red,
+               0px 0px 20px blue,
+               0px 0px 30px yellow,
+               0px 0px 40px green;
+}
+input{
+	text-align: center;
+	width: 30%;
+	display: inline-block;
+	color: black;
+	font-weight: 700;
+	
+
+
+}
+.weatherSection {
+    display: block;
+}
+
+.temperatureSection {
+    margin-top: 200px;
+    display: block;
+}
+
+.temperatureSection p {
+   
+    font-size: 80px;
+}
+
+.temperatureSection p,
+.temperatureSection#weatherIcon,
+.temperatureSection.btn-change {
+   display: inline;
+    margin-top: 10px;
+}
+
+.otherInformation {
+    
+    display: block;
+}
+.otherInformation{
+    font-weight: 700;
+   color: white;
+}
+.temperatureSection button{
+    background: #333399;
+    color: white;
+    font-weight: bold;
+
+}
+
+.infoBlock {
+    display: inline-block;
+    width: 22%;
+    height: 100px;
+    color: rgba(0, 0, 0);
+    background-color:#5c6bc0;
+    border-radius: 10px;
+    margin-left: 5px;
+}
+.infoBlock-weather{
+  display: inline-block;
+    width: 30%;
+    height: 100px;
+    color: rgba(0, 0, 0);
+    background-color:#5c6bc0;
+    border-radius: 10px;
+    margin-left: 5px;
+
+}
+.infoBlock-weather p{
+    padding-top: 20px;
+    font-size: 20px;
+    color: white;
+}
+.infoBlock p {
+    padding-top: 20px;
+    font-size: 20px;
+    color: white;
+}
+
+#weatherIcon {
+    width: 100px;
+    height: 100px;
+}
+
+.btn-change {
+    margin-left: 20px;
+}
