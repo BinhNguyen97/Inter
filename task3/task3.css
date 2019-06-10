@@ -1,0 +1,54 @@
+ body{
+ background:white;
+}
+a, a:link, a:active, a:visited, a:hover{
+  text-decoration: none;
+}
+input[type='text']{
+  border: 3px solid #666;
+  height: 65px;
+}
+input[type='text']:focus{
+  border: 3px solid #666;
+}
+.input-group-addon{
+  margin: 0px;
+  padding: 0px;
+}
+#heading{
+  padding-bottom: 25px;
+}
+#heading h1{
+  color: #666;
+}
+#search{
+  padding: 15px 35px;
+  background-color: #666;
+  border: 3px;
+}
+#search i{
+  font-size: 30px;
+  color: #888;
+}
+#random h2{
+  margin: 0px;
+  color: #666;
+}
+#random i{
+  padding: 12px 25px;
+  border-radius: 10px;
+  color: #888;
+  background-color: #666;
+}
+#res{
+  padding: 25px 0px;
+}
+#resultdiv{
+  background-color:#888;
+  border-radius: 5px;
+  margin: 25px auto;
+  padding: 15px 30px;
+}
+#resultdiv a{
+  color: rgba(255,255,255,0.9);
+}
