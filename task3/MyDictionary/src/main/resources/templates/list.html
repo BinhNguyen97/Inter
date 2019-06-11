@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout :: head"></head>
+<body>
+	<nav th:replace="layout :: header"></nav>
+
+	<div class="container main-content list">
+		<div th:if="${success}"
+			class="row alert alert-success alert-dismissible">
+			<button type="button" class="close" data-dismiss="alert"
+				aria-label="Close">
+				<span aria-hidden="true">×</span>
+			</button>
+			<span th:text="${success}"></span>
+		</div>
+		<div class="row">
+			<a th:href="@{/dictionary/create}" class="btn btn-success pull-left">
+				<span class="glyphicon glyphicon-plus"></span> Add new dictionary
+			</a>
+			<form class="form-inline pull-right" action="#"
+				th:action="@{/dictionary/search}" method="GET">
+				<div class="form-group">
+					<input type="text" class="form-control" name="s"
+						placeholder="Type dictionary name..." />
+				</div>
+				<button type="submit" class="btn btn-primary">Search</button>
+			</form>
+		</div>
+		<th:block th:if="${#lists.isEmpty(dictionarys)}">
+			<h3>No dictionary</h3>
+		</th:block>
+
+		<th:block th:unless="${#lists.isEmpty(dictionarys)}">
+			<div class="row">
+				<table class="table table-bordered table-hover">
+					<thead>
+						<tr>
+							<th>No</th>
+							<th>Word</th>
+							<th>Classfy</th>
+							<th>Intro</th>
+							<th>Edit</th>
+							<th>Delete</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr th:each="contact,iterStat : ${dictionarys}">
+							<td th:text="${iterStat.count}"></td>
+							<td th:text="${contact.word}"></td>
+							<td th:text="${contact.classfy}"></td>
+							<td th:text="${contact.intro}"></td>
+							<td><a th:href="@{/dictionary/{id}/edit(id=${contact.id})}"><span
+									class="glyphicon glyphicon-pencil"></span></a></td>
+							<td><a th:href="@{/dictionary/{id}/delete(id=${contact.id})}"><span
+									class="glyphicon glyphicon-trash"></span></a></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</th:block>
+	</div>
+	<!-- /.container -->
+
+	
+</body>
+</html>
