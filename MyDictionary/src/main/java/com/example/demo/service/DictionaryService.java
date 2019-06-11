@@ -1,5 +1,7 @@
 package com.example.demo.service;
 import java.util.List;
+import java.util.Optional;
+
 import com.example.demo.model.Dictionary;
 
 public interface DictionaryService {
@@ -7,7 +9,7 @@ public interface DictionaryService {
 
     List<Dictionary> search(String q);
 
-    Dictionary findOne(int id);
+    Optional<Dictionary> findOne(int id);
 
     void save(Dictionary contact);
 

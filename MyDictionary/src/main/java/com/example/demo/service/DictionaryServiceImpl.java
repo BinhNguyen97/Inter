@@ -26,8 +26,8 @@ public class DictionaryServiceImpl implements DictionaryService {
     }
 
     @Override
-    public Dictionary findOne(int id) {
-        return  ((DictionaryServiceImpl) DictionaryRepository).findOne(id);
+    public Optional<Dictionary> findOne(int id) {
+        return DictionaryRepository.findById(id);
     }
 
 
